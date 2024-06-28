@@ -1,0 +1,65 @@
+/* app.component.css */
+/* 
+.container {
+  margin: 20px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+} */
+
+.footer {
+  background-color: #232f3e;
+  color: #fff;
+  padding: 30px 0;
+  font-size: 14px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-section {
+  padding: 20px;
+  flex: 1;
+}
+
+.footer-section h2 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul {
+  font-size: 14px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.footer-section ul li a:hover {
+  color: #ff9900; /* Change color on hover */
+}
+
+.footer-bottom {
+  background-color: #1a222f;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 12px;
+}

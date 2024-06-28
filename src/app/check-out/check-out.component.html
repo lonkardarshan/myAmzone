@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div class="checkout-container">
+  <h2>Checkout</h2>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="order.email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="address">Shipping Address:</label>
+      <textarea id="address" [(ngModel)]="order.address" name="address" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNo">Phone Number:</label>
+      <input type="tel" id="phoneNo" [(ngModel)]="order.phoneNo" name="phoneNo" required>
+    </div>
+    <div class="form-group">
+      <label for="paymentStatus">Payment Status:</label>
+      <select id="paymentStatus" required [(ngModel)]="order.paymentStatus" name="paymentStatus">
+        <option *ngFor="let status of paymentStatusOptions" [value]="status">{{ status }}</option>
+      </select>
+    </div>
+
+    <div class="cart-summary">
+      <h3>Cart Summary</h3>
+      <div *ngFor="let item of cartitemdetail" class="cart-item">
+        <p>{{ item.name }} - {{ item.quantity }} x {{ item.price }} ₹</p>
+      </div>
+      <p class="total-price">Total: {{ totalPrice }}₹</p>
+    </div>
+
+    <button type="submit" class="checkout-button">Place Order</button>
+  </form>
+</div>

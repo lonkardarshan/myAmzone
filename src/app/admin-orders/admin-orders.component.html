@@ -1,0 +1,28 @@
+<!-- edit-product.component.html -->
+
+<div class="edit-product">
+  <h2>Edit Product</h2>
+  <form (ngSubmit)="saveChanges()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="product.name" required>
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" [(ngModel)]="product.description"></textarea>
+    </div>
+    <div>
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" [(ngModel)]="product.price" required>
+    </div>
+    <div>
+      <label for="imageUrl">Image URL:</label>
+      <input type="text" id="imageUrl" name="imageUrl" [(ngModel)]="product.imageUrl">
+    </div>
+    <div>
+      <label for="category">Category:</label>
+      <input type="text" id="category" name="category" [(ngModel)]="product.category">
+    </div>
+    <button type="submit">Save Changes</button>
+  </form>
+</div>

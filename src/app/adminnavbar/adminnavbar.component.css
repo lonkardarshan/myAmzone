@@ -1,0 +1,63 @@
+/* admin-index.component.css */
+
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    height: auto; 
+  }
+  
+  .admin-navbar {
+    background-color: #232f3e; 
+    color: white; 
+    padding: 10px 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  
+  .admin-logo {
+    font-size: 24px; 
+    font-weight: bold; 
+  }
+  
+  .admin-logo a {
+    color: white; 
+    text-decoration: none; 
+  }
+  
+  .admin-nav-links {
+    display: flex; 
+    align-items: center; 
+  }
+  
+  .admin-nav-links a {
+    color: white; /* Navigation link text color */
+    text-decoration: none; /* Remove underline */
+    margin-left: 20px; /* Spacing between navigation links */
+    font-size: 16px; /* Font size of navigation links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  }
+  
+  .admin-nav-links a:hover {
+    color: #f3a847; /* Hover color for navigation links */
+  }
+  
+  .admin-content {
+    flex: 1; /* Content area takes up remaining vertical space */
+    padding: 20px; /* Padding inside the content area */
+    background-color: #f4f4f4; /* Light background color */
+  }
+.logout-btn button {
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    margin: 10%;
+  }
+  
+  .logout-btn button:hover {
+    background-color: #d32f2f;
+  }

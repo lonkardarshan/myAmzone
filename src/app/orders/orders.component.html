@@ -1,0 +1,42 @@
+
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div *ngIf="orders.length > 0; else noOrders">
+    <table>
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Order Date</th>
+          <th>Address</th>
+          <th>Order Status</th>
+          <th>Payment Status</th>
+          <th>Phone No</th>
+          <th>Total Price</th>
+          <th>Products</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.email }}</td>
+          <td>{{ order.orderDate }}</td>
+          <td>{{ order.address }}</td>
+          <td>{{ order.orderStatus }}</td>
+          <td>{{ order.paymentStatus }}</td>
+          <td>{{ order.phoneNo }}</td>
+          <td>{{ order.totalPrice }} ₹</td>
+          <td>
+            <ul>
+              <li *ngFor="let product of order.products">
+                {{ getProductName(product.pid) }} (Quantity: {{ product.quantity }})
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noOrders>
+    <p>No orders found.</p>
+  </ng-template>
+</div>

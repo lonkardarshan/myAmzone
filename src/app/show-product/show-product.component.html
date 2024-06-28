@@ -1,0 +1,18 @@
+<app-adminnavbar></app-adminnavbar>
+<div class="admin-product-container">
+  <h2>Product List</h2>
+  <div class="product-grid">
+    <div *ngFor="let product of products" class="product-card">
+      <img [src]="product.imageUrl" alt="{{product.name}}" class="product-image">
+      <div class="product-details">
+        <h3>{{product.name}}</h3>
+        <p>{{product.description}}</p>
+        <p class="product-price">Price: ${{product.price}}</p>
+      </div>
+      <div class="product-actions">
+        <button (click)="editProduct(product.id)">Edit</button>
+        <button (click)="deleteProduct(product.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

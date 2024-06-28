@@ -1,0 +1,23 @@
+<div class="products-container">
+  <!-- Search Bar -->
+<div class="search-bar-container">
+  <input class="search-bar-input" type="text" placeholder="Search products..." [(ngModel)]="searchQuery" (input)="onSearch()">
+
+</div>
+  
+  <!-- Iterate over categories -->
+  <div *ngFor="let category of categories">
+    <h2>{{ category }}</h2>
+    <div class="product-row">
+      <!-- Display products for the current category -->
+      <div class="product" *ngFor="let product of displayedProducts[category]">
+        <img [src]="product.imageUrl" alt="{{ product.name }}">
+        <h3>Name: {{ product.name }}</h3>
+        <p>Price: {{ product.price }} ₹</p>
+        <button (click)="addToCart(product)">Add To Cart</button>
+      </div>
+    </div>
+    <!-- Load more button for the current category -->
+    <button *ngIf="showLoadMoreButton(category)" (click)="loadNextBatch(category)">Load More</button>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+.products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+  /* Adjust margin to create gaps between products */
+}
+
+.product {
+  width: calc(20% - 20px);
+  /* Adjust width to show 5 products in a row with gaps */
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+  height: 60%;
+}
+
+.product h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product button {
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+  background-color: #e68a00;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #ff9900;
+  color: aliceblue;
+}
+
+/* CSS for search bar */
+.search-bar-container {
+  margin: 10px 0;
+  position: relative;
+}
+
+.search-bar-input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.search-bar-input:focus {
+  outline: none;
+  border-color: #007bff; /* Example focus color */
+}
+
+.search-bar-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 9px 12px;
+  border: none; 
+  background-color: #007bff;
+  color: white;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.search-bar-button:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}

@@ -1,0 +1,21 @@
+<!-- admin-index.component.html -->
+
+<div class="admin-container">
+    <nav class="admin-navbar">
+      <div class="admin-logo">
+        <a routerLink="/admin">Admin Dashboard</a>
+      </div>
+  <div class="admin-nav-links">
+    <a routerLink="/adminuser">Users</a>
+    <a routerLink="/showproduct">Products</a>
+    <a routerLink="/product">Add Product</a>
+    <div class="logout-btn">
+      <button (click)="logout()">Logout</button>
+  </div>
+  </div>
+    </nav>
+    <div class="admin-content">
+      <router-outlet></router-outlet> <!-- Main content area for dynamically loaded components -->
+    </div>
+  </div>
+  

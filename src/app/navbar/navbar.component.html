@@ -1,0 +1,18 @@
+<div>
+
+  <nav class="navbar">
+    <div class="nav-left">
+      <a routerLink="/home" class="nav-logo">Amazon Clone</a>
+
+    </div>
+    <div class="nav-right">
+      <h5 class="email">{{ email }}</h5>
+      <a *ngIf="isLoggedIn" routerLink="/home" href="#" class="nav-link">Home</a>
+      <a *ngIf="isLoggedIn" routerLink="/cart" class="nav-link">Cart</a>
+      <a *ngIf="isLoggedIn" routerLink="/orders" class="nav-link">orders</a>
+      <button *ngIf="!isLoggedIn" class="nav-button login" (click)="login()">Login</button>
+      <button *ngIf="isLoggedIn" class="nav-button logout" (click)="logout()">Logout</button>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

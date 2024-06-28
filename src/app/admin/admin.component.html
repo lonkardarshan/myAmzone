@@ -1,0 +1,54 @@
+<app-adminnavbar></app-adminnavbar>
+<div class="container">
+  <div *ngIf="orders.length > 0; else noOrders">
+    <table>
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Email</th>
+          <th>Order Date</th>
+          <th>Address</th>
+          <th>Order Status</th>
+          <th>Payment Status</th>
+          <th>Phone No</th>
+          <th>Total Price</th>
+          <th>Products</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.orderid }}</td>
+          <td>{{ order.email }}</td>
+          <td>{{ order.orderDate }}</td>
+          <td>{{ order.address }}</td>
+          <td>
+            <select [(ngModel)]="order.orderStatus" (change)="updateOrderStatus(order)">
+              <option value="Pending">Pending</option>
+              <option value="Shipping">Shipping</option>
+              <option value="Delivered" [disabled]="order.orderStatus === 'Delivered'">Delivered</option>
+            </select>
+          </td>
+          <td>
+            <select [(ngModel)]="order.paymentStatus" (change)="updatePaymentStatus(order)">
+              <option value="Cash On Delivery">Cash On Delivery</option>
+              <option value="Unpaid">Unpaid</option>
+              <option value="paid" [disabled]="order.paymentStatus === 'Paid'">Paid</option>
+            </select>
+          </td>
+          <td>{{ order.phoneNo }}</td>
+          <td>{{ order.totalPrice }}</td>
+          <td>
+            <ul>
+              <li *ngFor="let product of order.products">
+                PID: {{ getProductName(product.pid) }}, Quantity: {{ product.quantity }}
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noOrders>
+    <p>No orders found.</p>
+  </ng-template>
+</div>

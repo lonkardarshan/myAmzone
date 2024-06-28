@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+ 
+<div class="cart-container">
+    <h1>Cart</h1>
+   
+    <div *ngFor="let i of cartitemdetail" class="cart-item">
+      <img [src]="i.imgurl" alt="{{i.name}}" class="cart-item-image">
+      <div class="cart-item-details">
+        <h3>{{i.name}}</h3>
+        <p>Price: {{i.price}} ₹</p>
+        <p>Quantity: {{i.quantity}}</p>
+        <p>Description : {{i.desc}}</p>
+      </div>
+      <div class="cart-item-actions">
+        <button (click)="delete(i.cartid)" class="delete-button">Delete</button>
+         <button (click)="increaseQuantity(i.pid)">+</button>
+        <button (click)="decreaseQuantity(i.pid)">-</button>
+      </div>
+    </div> 
+
+    <h1>Total :{{totalPrice}} ₹</h1>
+
+  </div>
+  
+   <div>
+   
+</div> 
+<div *ngIf="cartitemdetail.length > 0">
+  <!-- Display checkout button if there are items in the cart -->
+  <button class="checkout-button" (click)="checkout()">Checkout</button>
+</div>
+<div *ngIf="cartitemdetail.length === 0">
+  <!-- Optionally show a message if the cart is empty -->
+  <h3>Your cart is empty.</h3>
+</div>

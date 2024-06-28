@@ -1,0 +1,59 @@
+/* user-list.component.css */
+
+.user-list-container {
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .user-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .user-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-avatar {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .user-details {
+    margin-bottom: 15px;
+  }
+  
+  .user-details h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .user-details p {
+    margin: 5px 0;
+    color: #777;
+  }
+  
+  .user-actions button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-actions button:hover {
+    background-color: #0056b3;
+  }
+  

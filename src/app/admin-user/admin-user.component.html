@@ -1,0 +1,19 @@
+<app-adminnavbar></app-adminnavbar>
+<div class="user-list-container">
+    <h2>User List</h2>
+    <div class="user-grid">
+      <div *ngFor="let user of users" class="user-card">
+       
+        <div class="user-details">
+          <h3>{{user.name}}</h3>
+          <p>Email: {{user.email}}</p>
+          <p>User Type: {{user.usertype}}</p>
+        </div>
+        <div class="user-actions">
+         
+          <button (click)="deleteUser(user.email)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
